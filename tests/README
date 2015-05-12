@@ -1,0 +1,3 @@
+This directory contains old trajectory files and movies to check the outputs of UNCLE and LAMMPS.  
+There was an issue the the makestr.x routine (minkowskiReduce=.false. ; we set the minkowskiReduce to be true). It is now fixed.
+ 
