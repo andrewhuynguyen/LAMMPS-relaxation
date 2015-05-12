@@ -1,0 +1,57 @@
+#
+# This file contains the basic information about the lattice
+#
+#--------------------------------------------------------------------------------
+# General information
+# - name of the system
+# - type of CE: bulk / surf
+# - rank of CE:  2 / 3 / 4 ... (binary, ternary, quaternary)
+# - number of observables of CE: 1 
+# - epsilon for finite precision checking of real space coordinates
+#
+Hexagonal lattice for testing LAMMPS relaxation
+surf
+2
+1
+.0001 
+#
+#--------------------------------------------------------------------------------
+# Lattice information
+# - lattice vectors in cartesian coordinates, defining the unit cell:
+#   * a1
+#   * a2
+#   * a3
+# - lattice points in the unit (a.k.a. d-vectors)
+#   * number of d-vectors
+#   * coordinate system of dvectors: "direct" (lattice coords) or "cartesian"
+#   * for each d-vector: 3 coordinates
+#   NOTE: direct works like "atom_frac" in fhi_aims, cartesian like "atom"
+#|--- hexagonal -|
+ 1. 0. 0. ## 1. 0. 0.    
+ 0. 0.5 0.86602540378444 ## 0. 0. 1.   
+ 0. 1.0 0.0
+ 1        ##  
+ Cartesian   ##    
+ 0.0 0.0 0.0 ##  
+#         ##  
+# Surface Normal (only used for multilayer surface CEs)
+direct
+1. 0. 0.
+#
+#--------------------------------------------------------------------------------
+# Cutoffs for figure generation (cartesian L2 distance) for
+# pairs, triplets, quadruplets, quintuplets, sextuplets
+# The cutoff distance specifies the maximum average extent of the
+# cluster from the center of the clusters. Clusters are generated
+# automatically up to the specified cutoff. After they are generated,
+# the clusters will be written to the _clusters.out_ file
+400 400 150 95 75 0 0 0 0 0
+#15 15 15 15 15 0 0 0 0 0
+#
+#
+#--------------------------------------------------------------------------------
+# Number of references (only for multi-layer surface CEs)
+# default: 0
+0 
+#
+#--------------------------------------------------------------------------------
